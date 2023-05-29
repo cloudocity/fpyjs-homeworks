@@ -5,6 +5,28 @@
     <title>JS</title>
   </head>
   <body>
-    
+    <p>Loading, please wait...</p>
+    <script>
+     document.write('Hello, world!');
+    let n = Math.floor(Math.random() * 1000);
+    console.log(n);
+    while (true) {    
+        const userNumber = prompt("Введите число от 0 до 999:");
+        console.log("Вы ввели:", +userNumber);
+        if (userNumber === 'q') {
+            break
+        }
+        if (isNaN(userNumber) || (+userNumber > 999)) {
+            alert('Вы ввели не верное значение')
+        } else if (+userNumber === n) {
+            alert('Вы угадали, поздравляю!')
+        }  else if (+userNumber > n) {
+            alert('Больше')
+        } else {
+            alert('Меньше')
+        }
+        
+    }
+   </script>
   </body>
 </html>
